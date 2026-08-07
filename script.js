@@ -5,6 +5,9 @@
 (function () {
   "use strict";
 
+  document.documentElement.classList.remove("no-js");
+  document.documentElement.classList.add("js");
+
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------------- storage helpers (file:// safe) ---------------- */
@@ -16,6 +19,43 @@
   }
 
   function $(id) { return document.getElementById(id); }
+
+  /* ============================================================
+     CURRENT YEAR
+     ============================================================ */
+  var currentYear = $("currentYear");
+  var year = new Date().getFullYear();
+  currentYear.textContent = String(year);
+  currentYear.setAttribute("datetime", String(year));
+
+  /* ============================================================
+     MOBILE NAVIGATION
+     ============================================================ */
+  var navToggle = $("navToggle");
+  var navLinks = $("navLinks");
+  var navToggleLabel = navToggle.querySelector(".nav-toggle-label");
+
+  function setNavOpen(open) {
+    navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    navToggle.setAttribute("aria-label", open ? "Close city menu" : "Open city menu");
+    navLinks.classList.toggle("is-open", open);
+    navToggleLabel.textContent = open ? "CLOSE MENU" : "CITY MENU";
+  }
+
+  navToggle.addEventListener("click", function () {
+    setNavOpen(navToggle.getAttribute("aria-expanded") !== "true");
+  });
+
+  navLinks.addEventListener("click", function (e) {
+    if (e.target.closest(".nav-link")) setNavOpen(false);
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && navToggle.getAttribute("aria-expanded") === "true") {
+      setNavOpen(false);
+      navToggle.focus();
+    }
+  });
 
   /* ============================================================
      TOAST
@@ -165,7 +205,9 @@
     "Your grandpa's beach town, now with oat milk.",
     "The fog is not a bug. It's the marine layer.",
     "Oceanside: still gritty, now with $14 lattes.",
-    "A 1,954-foot pier and zero answers."
+    "A 1,954-foot pier and zero answers.",
+    "Where coastal grit meets a brand activation.",
+    "Now leasing the former location of the thing you liked."
   ];
   var tIdx2 = 0;
   var taglineEl = $("tagline");
@@ -197,7 +239,10 @@
     "The 5-over-1 on the corner has 214 units and zero residents who can afford the parking structure.",
     "Camp Pendleton is next door. The Marines have never complained about the potholes, because the potholes have never complained about the Marines.",
     "The pier has been rebuilt exactly once, in 1987, which the city refers to as 'the maintenance plan.'",
-    "The Sunset Market is not the farmers market. The city apologizes on behalf of everyone who keeps saying it is."
+    "The Sunset Market is not the farmers market. The city apologizes on behalf of everyone who keeps saying it is.",
+    "The Strand has two speed limits: 5 mph and 'looking for parking.' Both are enforced by bicycles.",
+    "Every new downtown building is named after an ocean noun. The Pacific Oat was the last available combination.",
+    "Coast Highway is simultaneously a road, a construction project, and a group chat about what used to be there."
   ];
   var factQueue = null;
   var factOut = $("factOut");
@@ -311,11 +356,18 @@
      PIER
      ============================================================ */
   var pierTold = false;
-  $("pier").addEventListener("click", function () {
+  var pier = $("pier");
+
+  function onPier() {
     if (!pierTold) {
       pierTold = true;
       showToast("The pier is holding. It will continue to hold.");
     }
+  }
+
+  pier.addEventListener("click", onPier);
+  pier.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onPier(); }
   });
 
   /* ============================================================

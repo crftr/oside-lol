@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
   <meta charset="UTF-8">
@@ -46,7 +46,6 @@
         <span>OSIDE.LOL</span><span class="star">✦</span>
         <span>EST. 1883 · REBUILT 1987 · QUESTIONED DAILY</span><span class="star">✦</span>
         <span>WORLD'S LONGEST WOODEN PIER — STILL HOLDING</span><span class="star">✦</span>
-        <span>HOME OF THE MARINES, THE FARMERS MARKET, AND A PARKING PROBLEM</span><span class="star">✦</span>
         <span>NOW SERVING COLD BREW. THE POTHOLES ARE COMPLEMENTARY.</span><span class="star">✦</span>
         <span>THE FOG IS NOT A BUG. IT'S THE MARINE LAYER.</span><span class="star">✦</span>
         <span>UNDER CONSTRUCTION SINCE APPROXIMATELY FOREVER</span><span class="star">✦</span>
@@ -82,7 +81,12 @@
         </span>
         <span class="brand-name">OSIDE<span class="brand-dot">.LOL</span></span>
       </a>
-      <ul class="nav-links">
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks"
+        aria-label="Open city menu">
+        <span class="nav-toggle-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="nav-toggle-label">CITY MENU</span>
+      </button>
+      <ul class="nav-links" id="navLinks">
         <li><button class="nav-link glitch" id="navPierCam" type="button">PIER CAM</button></li>
         <li><button class="nav-link glitch" id="navCouncil" type="button">CITY COUNCIL</button></li>
         <li><a class="nav-link glitch" href="#facts">FACTS</a></li>
@@ -98,14 +102,14 @@
 
     <!-- ==================== HERO ==================== -->
     <section class="hero" id="hero" aria-label="Welcome to Oside dot lol">
-      <div class="hero-scene" aria-hidden="true">
-        <div class="sun-glow"></div>
+      <div class="hero-scene">
+        <div class="sun-glow" aria-hidden="true"></div>
         <div class="sun" id="sun" role="button" tabindex="0" aria-label="The sun. Click to file a complaint.">
           <span class="sun-disc"></span>
           <p class="sun-message" id="sunMessage" role="status"></p>
         </div>
-        <div class="pier" id="pier">
-          <svg viewBox="0 0 960 200" preserveAspectRatio="xMidYMax meet">
+        <div class="pier" id="pier" role="button" tabindex="0" aria-label="The Oceanside pier. Ask if it is holding.">
+          <svg viewBox="0 0 960 200" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
             <defs>
               <pattern id="pierPosts" width="40" height="20" patternUnits="userSpaceOnUse">
                 <rect x="0" y="0" width="3" height="20" fill="#0c0414" />
@@ -127,7 +131,7 @@
               opacity="0.85" />
           </svg>
         </div>
-        <div class="grid-floor"></div>
+        <div class="grid-floor" aria-hidden="true"></div>
       </div>
 
       <div class="hero-content">
@@ -160,6 +164,31 @@
           class="blink">◉</span></span>
       <div class="caution-stripes"></div>
     </div>
+
+    <!-- ==================== MUNICIPAL CONDITIONS ==================== -->
+    <section class="conditions" aria-labelledby="conditionsTitle">
+      <h2 class="sr-only" id="conditionsTitle">Current Oceanside conditions</h2>
+      <p class="condition">
+        <span class="condition-label">SURF</span>
+        <strong>2–3 FT</strong>
+        <span class="condition-note">BETTER YESTERDAY</span>
+      </p>
+      <p class="condition">
+        <span class="condition-label">WATER</span>
+        <strong>64°F</strong>
+        <span class="condition-note">LEGALLY BRISK</span>
+      </p>
+      <p class="condition">
+        <span class="condition-label">PIER</span>
+        <strong>HOLDING</strong>
+        <span class="condition-note">NO FOLLOW-UP QUESTIONS</span>
+      </p>
+      <p class="condition">
+        <span class="condition-label">RENT</span>
+        <strong>MARKET RATE</strong>
+        <span class="condition-note">MARKET DECLINED COMMENT</span>
+      </p>
+    </section>
 
     <!-- ==================== SEC 01 · WELCOME ==================== -->
     <section class="window sec" id="welcome" aria-labelledby="welcomeTitle">
@@ -426,7 +455,7 @@
         <p>CHEATS: <span id="cheatCount">0</span></p>
       </div>
     </div>
-    <p class="footer-line">© 2026 The City of Oceanside, probably. Not affiliated. Lol.</p>
+    <p class="footer-line">© <time id="currentYear">YEAR PENDING</time> The City of Oceanside, probably. Not affiliated. Lol.</p>
     <p class="footer-note">Best viewed in 800×600 on a CRT monitor inside a fog bank.</p>
     <p class="footer-note">Made with questionable judgment. No warranty expressed or implied. No refunds.</p>
     <p class="footer-note">Powered by the marine layer since 1987.</p>
