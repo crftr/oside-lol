@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="OSIDE.LOL — the unofficial official website for Oceanside, California. Home of the longest wooden pier on the West Coast, a metric the city has never once explained.">
+  <meta name="theme-color" content="#150824">
+  <meta property="og:title" content="OSIDE.LOL">
+  <meta property="og:description" content="Still gritty, now with oat milk.">
+  <title>OSIDE.LOL</title>
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='38' fill='none' stroke='%23ff2d95' stroke-width='10'/%3E%3Cpath d='M2 50 C 14 32 26 32 38 50 C 50 68 62 68 74 50 C 82 38 90 36 98 40' fill='none' stroke='%2300f0ff' stroke-width='10'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Shared SVG defs for the Oceanside "O with a wave" mark -->
+  <svg class="defs" aria-hidden="true">
+    <defs>
+      <linearGradient id="ochrome" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#ffffff" />
+        <stop offset="0.3" stop-color="#cfeaff" />
+        <stop offset="0.55" stop-color="#6fd8ff" />
+        <stop offset="0.78" stop-color="#ff9ff0" />
+        <stop offset="1" stop-color="#ff2d95" />
+      </linearGradient>
+      <g id="o-ring">
+        <circle cx="50" cy="50" r="38" fill="none" stroke="url(#ochrome)" stroke-width="11" />
+      </g>
+      <g id="o-wave">
+        <path d="M2 50 C 14 32 26 32 38 50 C 50 68 62 68 74 50 C 82 38 90 36 98 40" fill="none" stroke="url(#ochrome)"
+          stroke-width="11" stroke-linecap="round" />
+      </g>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ==================== TICKER ==================== -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <div class="ticker-group">
+        <span>OSIDE.LOL</span><span class="star">✦</span>
+        <span>EST. 1883 · REBUILT 1987 · QUESTIONED DAILY</span><span class="star">✦</span>
+        <span>WORLD'S LONGEST WOODEN PIER — STILL HOLDING</span><span class="star">✦</span>
+        <span>HOME OF THE MARINES, THE FARMERS MARKET, AND A PARKING PROBLEM</span><span class="star">✦</span>
+        <span>NOW SERVING COLD BREW. THE POTHOLES ARE COMPLEMENTARY.</span><span class="star">✦</span>
+        <span>THE FOG IS NOT A BUG. IT'S THE MARINE LAYER.</span><span class="star">✦</span>
+        <span>UNDER CONSTRUCTION SINCE APPROXIMATELY FOREVER</span><span class="star">✦</span>
+        <span>DAWN PATROL AT 5:47 AM, EXACTLY</span><span class="star">✦</span>
+        <span>WELCOME TO O'SIDE. BRING A WETSUIT.</span><span class="star">✦</span>
+      </div>
+      <div class="ticker-group">
+        <span>OSIDE.LOL</span><span class="star">✦</span>
+        <span>EST. 1883 · REBUILT 1987 · QUESTIONED DAILY</span><span class="star">✦</span>
+        <span>WORLD'S LONGEST WOODEN PIER — STILL HOLDING</span><span class="star">✦</span>
+        <span>HOME OF THE MARINES, THE FARMERS MARKET, AND A PARKING PROBLEM</span><span class="star">✦</span>
+        <span>NOW SERVING COLD BREW. THE POTHOLES ARE COMPLEMENTARY.</span><span class="star">✦</span>
+        <span>THE FOG IS NOT A BUG. IT'S THE MARINE LAYER.</span><span class="star">✦</span>
+        <span>UNDER CONSTRUCTION SINCE APPROXIMATELY FOREVER</span><span class="star">✦</span>
+        <span>DAWN PATROL AT 5:47 AM, EXACTLY</span><span class="star">✦</span>
+        <span>WELCOME TO O'SIDE. BRING A WETSUIT.</span><span class="star">✦</span>
+      </div>
+    </div>
+  </div>
+  <p class="sr-only">Scrollable ticker of city facts. The same facts appear throughout the page.</p>
+
+  <!-- ==================== NAV ==================== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="#hero" aria-label="Oside dot lol, back to top">
+        <span class="o-mark o-mark-sm" aria-hidden="true">
+          <svg class="o-svg" viewBox="0 0 100 100">
+            <use href="#o-ring" />
+          </svg>
+          <svg class="o-svg" viewBox="0 0 100 100">
+            <use href="#o-wave" />
+          </svg>
+        </span>
+        <span class="brand-name">OSIDE<span class="brand-dot">.LOL</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><button class="nav-link glitch" id="navPierCam" type="button">PIER CAM</button></li>
+        <li><button class="nav-link glitch" id="navCouncil" type="button">CITY COUNCIL</button></li>
+        <li><a class="nav-link glitch" href="#facts">FACTS</a></li>
+        <li><a class="nav-link glitch" href="#development">DEVELOPMENT</a></li>
+        <li><a class="nav-link glitch" href="#guestbook">GUESTBOOK</a></li>
+        <li><button class="nav-link glitch" id="navMystery" type="button"
+            aria-label="A mystery. Which is the same as a link.">???</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero" aria-label="Welcome to Oside dot lol">
+      <div class="hero-scene" aria-hidden="true">
+        <div class="sun-glow"></div>
+        <div class="sun" id="sun" role="button" tabindex="0" aria-label="The sun. Click to file a complaint.">
+          <span class="sun-disc"></span>
+          <p class="sun-message" id="sunMessage" role="status"></p>
+        </div>
+        <div class="pier" id="pier">
+          <svg viewBox="0 0 960 200" preserveAspectRatio="xMidYMax meet">
+            <defs>
+              <pattern id="pierPosts" width="40" height="20" patternUnits="userSpaceOnUse">
+                <rect x="0" y="0" width="3" height="20" fill="#0c0414" />
+              </pattern>
+              <pattern id="pierBents" width="96" height="150" patternUnits="userSpaceOnUse">
+                <path d="M4 0 L4 150 M48 0 L48 150" stroke="#0c0414" stroke-width="4" fill="none" />
+                <path d="M10 0 L86 150 M86 0 L10 150" stroke="#0c0414" stroke-width="3" fill="none" />
+              </pattern>
+            </defs>
+            <rect x="0" y="42" width="960" height="18" fill="#0c0414" />
+            <rect x="0" y="44" width="960" height="16" fill="url(#pierPosts)" />
+            <rect x="0" y="60" width="960" height="140" fill="url(#pierBents)" />
+            <path d="M0 56 V42 H960 V56 Z" fill="#0c0414" />
+            <path d="M848 56 V14 H960 V56 Z" fill="#0c0414" />
+            <path d="M836 14 H972 L958 6 H848 Z" fill="#0c0414" />
+            <rect x="872" y="30" width="12" height="10" fill="#ff2d95" opacity="0.9" />
+            <rect x="900" y="22" width="12" height="10" fill="#00f0ff" opacity="0.9" />
+            <path d="M0 40 H960" stroke="#ff2d95" stroke-width="3" stroke-dasharray="0 40" stroke-linecap="round"
+              opacity="0.85" />
+          </svg>
+        </div>
+        <div class="grid-floor"></div>
+      </div>
+
+      <div class="hero-content">
+        <p class="aesthetic" aria-hidden="true">a e s t h e t i c</p>
+        <h1 class="hero-title" id="heroTitle">
+          <span class="hero-o o-mark" id="heroO" role="button" tabindex="0"
+            aria-label="The Oceanside O mark. Click to change its mood.">
+            <svg class="o-svg" viewBox="0 0 100 100">
+              <use href="#o-ring" />
+            </svg>
+            <svg class="o-svg" viewBox="0 0 100 100">
+              <use href="#o-wave" />
+            </svg>
+          </span>
+          <span class="title-text" id="titleText"><span class="chrome">SIDE</span><span class="lol">.lol</span></span>
+        </h1>
+        <p class="tagline" id="tagline">World's longest wooden pier — still holding.</p>
+        <p class="hero-credit">OSIDE, CALIFORNIA · 92054 · 33.20°N 117.38°W · THE PIER</p>
+        <div class="hero-actions">
+          <button class="btn" id="factBtn" type="button">Tell me a fact</button>
+          <a class="btn btn-ghost" href="#welcome">Why am I here</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CAUTION DIVIDER ==================== -->
+    <div class="caution" role="presentation">
+      <div class="caution-stripes"></div>
+      <span class="caution-text"><span class="blink">◉</span> UNDER CONSTRUCTION SINCE APPROXIMATELY FOREVER <span
+          class="blink">◉</span></span>
+      <div class="caution-stripes"></div>
+    </div>
+
+    <!-- ==================== SEC 01 · WELCOME ==================== -->
+    <section class="window sec" id="welcome" aria-labelledby="welcomeTitle">
+      <div class="win-bar">
+        <h2 class="win-title" id="welcomeTitle"><span class="sec-num">01</span> OSIDE.TXT</h2>
+        <span class="win-dots">
+          <span class="dot dot-red js-win-close" tabindex="0" role="button" aria-label="Close window"
+            data-win="welcome"></span>
+          <span class="dot dot-yellow js-win-shrug" tabindex="0" role="button" aria-label="Minimize window"></span>
+          <span class="dot dot-green js-win-shrug" tabindex="0" role="button" aria-label="Maximize window"></span>
+        </span>
+      </div>
+      <div class="win-body">
+        <p class="lede">Welcome to <strong>Oceanside, California</strong> — home of the longest wooden pier on the West
+          Coast, a metric the city insists on leading with and has never once explained.</p>
+        <p>The Marines are next door. The surfers are at the pier. The marine layer is everywhere else. There is a fish
+          taco within walking distance of any point in town, including the middle of the harbor.</p>
+        <p class="fine-print">This website has been under construction since approximately forever. Do not adjust your
+          screen. The screen is fine. It's the fog.</p>
+
+        <aside class="official-review" aria-label="Official review">
+          <p class="review-stars" aria-hidden="true">★☆☆☆☆</p>
+          <p class="review-quote">"It's a city."</p>
+          <p class="review-by">— a person who definitely visited once</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ==================== SEC 02 · CERTIFIED FACTS ==================== -->
+    <section class="window sec" id="facts" aria-labelledby="factsTitle">
+      <div class="win-bar">
+        <h2 class="win-title" id="factsTitle"><span class="sec-num">02</span> CITYDATA.SYS — CERTIFIED FACTS</h2>
+        <span class="win-dots">
+          <span class="dot dot-red js-win-close" tabindex="0" role="button" aria-label="Close window"
+            data-win="facts"></span>
+          <span class="dot dot-yellow js-win-shrug" tabindex="0" role="button" aria-label="Minimize window"></span>
+          <span class="dot dot-green js-win-shrug" tabindex="0" role="button" aria-label="Maximize window"></span>
+        </span>
+      </div>
+      <div class="win-body">
+        <p class="win-intro">The following statistics are certified by the City of Oceanside, then forwarded to the
+          pier, then lost.</p>
+        <div class="stat-grid">
+          <article class="stat">
+            <p class="stat-value chrome">1,954 ft</p>
+            <h3 class="stat-label">Pier length</h3>
+            <p class="stat-note">Longest wooden pier on the West Coast. Why that's the metric: classified.</p>
+            <p class="stat-stamp" aria-hidden="true">CERTIFIED</p>
+          </article>
+          <article class="stat">
+            <p class="stat-value chrome">314 days</p>
+            <h3 class="stat-label">Marine layer, per year</h3>
+            <p class="stat-note">Not a bug. A feature shipped by the Pacific in 1987 and never patched.</p>
+            <p class="stat-stamp" aria-hidden="true">CERTIFIED</p>
+          </article>
+          <article class="stat">
+            <p class="stat-value chrome">4.2/10</p>
+            <h3 class="stat-label">Oat milk index</h3>
+            <p class="stat-note">Up from 0.0 in 2016. The cold brew is $7.50. The potholes are complementary.</p>
+            <p class="stat-stamp" aria-hidden="true">CERTIFIED</p>
+          </article>
+          <article class="stat">
+            <p class="stat-value chrome">1.2 / block</p>
+            <h3 class="stat-label">Pothole density</h3>
+            <p class="stat-note">Unchanged since incorporation. The city refers to this as "charm infrastructure."</p>
+            <p class="stat-stamp" aria-hidden="true">CERTIFIED</p>
+          </article>
+          <article class="stat">
+            <p class="stat-value chrome">5:47 AM</p>
+            <h3 class="stat-label">Dawn patrol</h3>
+            <p class="stat-note">If you are not in the water by then, the lineup is full. This is not a drill.</p>
+            <p class="stat-stamp" aria-hidden="true">CERTIFIED</p>
+          </article>
+          <article class="stat">
+            <p class="stat-value chrome">0 spots</p>
+            <h3 class="stat-label">Parking</h3>
+            <p class="stat-note">One spot was proposed in 2019. It is still in committee.</p>
+            <p class="stat-stamp" aria-hidden="true">CERTIFIED</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ==================== SEC 03 · FACT GENERATOR ==================== -->
+    <section class="window sec" id="factgen" aria-labelledby="factgenTitle">
+      <div class="win-bar">
+        <h2 class="win-title" id="factgenTitle"><span class="sec-num">03</span> FACTOR.EXE</h2>
+        <span class="win-dots">
+          <span class="dot dot-red js-win-close" tabindex="0" role="button" aria-label="Close window"
+            data-win="factgen"></span>
+          <span class="dot dot-yellow js-win-shrug" tabindex="0" role="button" aria-label="Minimize window"></span>
+          <span class="dot dot-green js-win-shrug" tabindex="0" role="button" aria-label="Maximize window"></span>
+        </span>
+      </div>
+      <div class="win-body">
+        <p class="win-intro">The City maintains a list of certified facts. Most of them are pier-related.</p>
+        <p class="fact" id="factOut" aria-live="polite">The pier is 1,954 feet long. It has been 1,954 feet long since
+          1987. This is the entire fact.</p>
+        <button class="btn" id="factBtn2" type="button">Tell me a fact</button>
+        <p class="fact-hint">Facts are certified, then forwarded to the pier, then lost. No refunds.</p>
+      </div>
+    </section>
+
+    <!-- ==================== SEC 04 · DEVELOPMENT ==================== -->
+    <section class="window sec" id="development" aria-labelledby="devTitle">
+      <div class="win-bar">
+        <h2 class="win-title" id="devTitle"><span class="sec-num">04</span> PACIFIC-OAT.EXE — NEW DEVELOPMENT</h2>
+        <span class="win-dots">
+          <span class="dot dot-red js-win-close" tabindex="0" role="button" aria-label="Close window"
+            data-win="development"></span>
+          <span class="dot dot-yellow js-win-shrug" tabindex="0" role="button" aria-label="Minimize window"></span>
+          <span class="dot dot-green js-win-shrug" tabindex="0" role="button" aria-label="Maximize window"></span>
+        </span>
+      </div>
+      <div class="win-body">
+        <p class="win-intro"><strong>The Pacific Oat</strong> — coming soon to every corner of downtown. Est. completion
+          2037.</p>
+
+        <div class="build-row">
+          <div class="building" aria-hidden="true">
+            <div class="b-crane">
+              <span class="crane-mast"></span>
+              <span class="crane-boom"></span>
+              <span class="crane-cable"></span>
+              <span class="crane-hook"></span>
+            </div>
+            <div class="b-topbar">PACIFIC OAT</div>
+            <div class="b-floor"><span class="b-win"></span><span class="b-win"></span><span class="b-win"></span><span
+                class="b-win"></span></div>
+            <div class="b-floor"><span class="b-win"></span><span class="b-win"></span><span class="b-win"></span><span
+                class="b-win"></span></div>
+            <div class="b-floor"><span class="b-win"></span><span class="b-win"></span><span class="b-win"></span><span
+                class="b-win"></span></div>
+            <div class="b-floor"><span class="b-win"></span><span class="b-win"></span><span class="b-win"></span><span
+                class="b-win"></span></div>
+            <div class="b-floor"><span class="b-win"></span><span class="b-win"></span><span class="b-win"></span><span
+                class="b-win"></span></div>
+            <div class="b-cafe"><span class="cafe-sign">COLD BREW</span></div>
+            <div class="b-sign">EST. COMPLETION 2037</div>
+          </div>
+
+          <div class="amenities">
+            <h3 class="amenities-title">AMENITIES</h3>
+            <ul>
+              <li>Ocean views <span class="fine">(subject to marine layer)</span></li>
+              <li>Rooftop cold brew bar</li>
+              <li>Artisanal pothole remediation</li>
+              <li>Bike racks <span class="fine">(theoretical)</span></li>
+              <li>1,954-ft walk to the pier. 1,954-ft walk back.</li>
+              <li>5-over-1. The 5 is retail. The 1 is regret.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="progress-block">
+          <div class="progress-bar" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"
+            aria-label="Construction progress">
+            <div class="progress-fill">12%</div>
+          </div>
+          <p class="progress-note">ETA: unknown · progress: negligible · hope: diminishing</p>
+        </div>
+
+        <p class="win-intro fine-print">Now accepting applications for a waitlist for a notification list. Your
+          grandpa's beach town, now with oat milk.</p>
+      </div>
+    </section>
+
+    <!-- ==================== SEC 05 · GUESTBOOK ==================== -->
+    <section class="window sec" id="guestbook" aria-labelledby="guestTitle">
+      <div class="win-bar">
+        <h2 class="win-title" id="guestTitle"><span class="sec-num">05</span> GUESTBOOK.EXE — SIGN IT, IT IS THE LAW
+        </h2>
+        <span class="win-dots">
+          <span class="dot dot-red js-win-close" tabindex="0" role="button" aria-label="Close window"
+            data-win="guestbook"></span>
+          <span class="dot dot-yellow js-win-shrug" tabindex="0" role="button" aria-label="Minimize window"></span>
+          <span class="dot dot-green js-win-shrug" tabindex="0" role="button" aria-label="Maximize window"></span>
+        </span>
+      </div>
+      <div class="win-body">
+        <p class="win-intro">Entries since 1997: <strong id="guestCount">4</strong>. All have been read, then lost.</p>
+        <ul class="guest-list" id="guestList">
+          <li class="entry">
+            <p class="entry-meta"><span class="entry-name">jared</span> · madison, wi · 1998</p>
+            <p class="entry-body">nice pier. 10/10.</p>
+            <p class="entry-status">status: verified never</p>
+          </li>
+          <li class="entry">
+            <p class="entry-meta"><span class="entry-name">lindsey</span> · local · 2019</p>
+            <p class="entry-body">please stop calling it the farmers market. it's the sunset market. we have had this
+              conversation.</p>
+            <p class="entry-status">status: heard</p>
+          </li>
+          <li class="entry">
+            <p class="entry-meta"><span class="entry-name">surfbum420</span> · unknown · 2004</p>
+            <p class="entry-body">gnarly</p>
+            <p class="entry-status">status: meaning unclear</p>
+          </li>
+          <li class="entry">
+            <p class="entry-meta"><span class="entry-name">city of oceanside</span> · unofficial · today</p>
+            <p class="entry-body">this website is not affiliated with the city of oceanside. wait. that's us. nevermind.
+            </p>
+            <p class="entry-status">status: under review by us, which is also the reviewer</p>
+          </li>
+        </ul>
+
+        <form class="guest-form" id="guestForm">
+          <div class="form-row">
+            <label for="guestName">NAME</label>
+            <input type="text" id="guestName" maxlength="40" placeholder="your name (any name)" required>
+          </div>
+          <div class="form-row">
+            <label for="guestMsg">MESSAGE</label>
+            <textarea id="guestMsg" rows="3" maxlength="240" placeholder="e.g. the pier is fine" required></textarea>
+          </div>
+          <button class="btn" type="submit">Sign guestbook</button>
+        </form>
+        <p class="fact-hint">Entries are reviewed by the City, then forwarded to the pier, then lost.</p>
+      </div>
+    </section>
+
+    <!-- ==================== WEBRING ==================== -->
+    <div class="webring" role="navigation" aria-label="Webring">
+      <p class="webring-name">OSIDE.LOL WEBRING <span aria-hidden="true">◆</span> POPULATION: 1</p>
+      <div class="webring-links">
+        <button class="nav-link" id="ringPrev" type="button">◀ PREV</button>
+        <span class="webring-sep" aria-hidden="true">—</span>
+        <button class="nav-link" id="ringRandom" type="button">RANDOM</button>
+        <span class="webring-sep" aria-hidden="true">—</span>
+        <button class="nav-link" id="ringNext" type="button">NEXT ▶</button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="o-mark o-mark-sm" aria-hidden="true">
+          <svg class="o-svg" viewBox="0 0 100 100">
+            <use href="#o-ring" />
+          </svg>
+          <svg class="o-svg" viewBox="0 0 100 100">
+            <use href="#o-wave" />
+          </svg>
+        </span>
+        <p>OSIDE.LOL</p>
+        <p class="footer-tag">your grandpa's beach town, now with oat milk.</p>
+      </div>
+      <div class="footer-links">
+        <h2 class="sr-only">Footer links</h2>
+        <ul>
+          <li><button class="nav-link" id="footBug" type="button">REPORT A BUG</button></li>
+          <li><button class="nav-link" id="footOfficial" type="button">OFFICIAL CITY WEBSITE (NO, NOT THAT ONE)</button>
+          </li>
+          <li><button class="nav-link" id="footPostcard" type="button">SEND POSTCARD</button></li>
+          <li><button class="nav-link" id="footCouncil" type="button">CITY COUNCIL (AGAIN)</button></li>
+        </ul>
+      </div>
+      <div class="footer-counters">
+        <p>VISITORS (CERTIFIED): <span id="visitorCount">0,001</span></p>
+        <p>TIME WASTED: <span id="timeWasted">00:00</span></p>
+        <p>SUN CLICKS: <span id="sunCount">0</span></p>
+        <p>CHEATS: <span id="cheatCount">0</span></p>
+      </div>
+    </div>
+    <p class="footer-line">© 2026 The City of Oceanside, probably. Not affiliated. Lol.</p>
+    <p class="footer-note">Best viewed in 800×600 on a CRT monitor inside a fog bank.</p>
+    <p class="footer-note">Made with questionable judgment. No warranty expressed or implied. No refunds.</p>
+    <p class="footer-note">Powered by the marine layer since 1987.</p>
+  </footer>
+
+  <!-- ==================== OVERLAYS ==================== -->
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="crt-sweep" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="fog-overlay" aria-hidden="true"></div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="window modal-window">
+      <div class="win-bar">
+        <span class="win-icon" aria-hidden="true">◉</span>
+        <span class="win-title" id="modalTitle">SYSTEM</span>
+        <span class="win-dots">
+          <span class="dot dot-red js-modal-close" tabindex="0" role="button" aria-label="Close dialog"></span>
+        </span>
+      </div>
+      <div class="win-body modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden>
+    <div class="toast-bar">
+      <span class="toast-title">OSIDE.MSG</span>
+      <button class="toast-x" id="toastClose" type="button" aria-label="Dismiss message">✕</button>
+    </div>
+    <p class="toast-msg" id="toastMsg"></p>
+  </div>
+
+  <!-- Pop-up ad -->
+  <div class="popup" id="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle" hidden>
+    <div class="popup-inner">
+      <p class="popup-live" aria-hidden="true">◉ LIVE · DEFINITELY NOT A TEST</p>
+      <p class="popup-title" id="popupTitle">ATTENTION!</p>
+      <p class="popup-body">You are the <strong>1,000,000th</strong> visitor to OSIDE.LOL. The City would like to
+        congratulate you and also apologize.</p>
+      <div class="popup-actions">
+        <button class="btn" id="popupClaim" type="button">CLAIM PRIZE</button>
+        <button class="btn btn-ghost" id="popupClose" type="button">✕ no thanks</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Boot/loading overlay -->
+  <div class="loading" id="loading" aria-hidden="true" hidden>
+    <div class="window loading-window">
+      <div class="win-bar">
+        <span class="win-icon" aria-hidden="true">◉</span>
+        <span class="win-title">OSIDE.BIO</span>
+      </div>
+      <div class="win-body">
+        <p class="loading-text" id="loadingText">loading the marine layer...</p>
+        <div class="progress-bar">
+          <div class="progress-fill progress-fill-load" id="loadingBar">0%</div>
+        </div>
+        <p class="fact-hint">skip: click or press any key. it doesn't matter.</p>
+      </div>
+    </div>
+  </div>
+
+  <noscript>
+    <p class="noscript-note">This page is best experienced with JavaScript, like most things from the 1990s. The pier
+      will still be there either way.</p>
+  </noscript>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
