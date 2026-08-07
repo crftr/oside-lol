@@ -200,7 +200,7 @@
   var taglines = [
     "World's longest wooden pier — still holding.",
     "Est. 1883. Rebuilt 1987. Questioned daily.",
-    "Home of the Marines, the farmers market, and a parking problem.",
+    "Marines, the sunset market, and a parking problem.",
     "Now serving cold brew. The potholes are complementary.",
     "Your grandpa's beach town, now with oat milk.",
     "The fog is not a bug. It's the marine layer.",

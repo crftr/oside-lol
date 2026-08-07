@@ -6,9 +6,9 @@ Still gritty. Now with oat milk.
 
 ## What this is
 
-OSIDE.LOL is a dependency-free, static joke site for a very real domain. It treats Oceanside like a municipal computer system that washed ashore in 1987 and has been issuing surf reports, development notices, and certified pier facts ever since.
+OSIDE.LOL is a dependency-free static site. It treats Oceanside like a municipal computer system that washed ashore in 1987 and has been issuing surf reports, development notices, and certified pier facts ever since.
 
-The visual direction mixes:
+The vibes:
 
 - vaporwave sunsets and CRT grime;
 - surf-town localism and marine-layer fatalism;
