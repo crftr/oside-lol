@@ -81,6 +81,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1.5px #1a0b2e;
 }
 @supports not (-webkit-background-clip: text) {
