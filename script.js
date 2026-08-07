@@ -203,7 +203,7 @@
     "Marines, the sunset market, and a parking problem.",
     "Now serving cold brew. The potholes are complementary.",
     "Your grandpa's beach town, now with oat milk.",
-    "The fog is not a bug. It's the marine layer.",
+    "Oceanside: what Carlsbad's HOA warned you about.",
     "Oceanside: still gritty, now with $14 lattes.",
     "A 1,954-foot pier and zero answers.",
     "Where coastal grit meets a brand activation.",
@@ -229,7 +229,7 @@
      ============================================================ */
   var facts = [
     "The pier is 1,954 feet long. It has been 1,954 feet long since 1987. This is the entire fact.",
-    "The marine layer has never once been invited anywhere. Yet it attends everything.",
+    "Oceanside is the only North County beach town where spontaneous fun begins before the sponsor logo is approved. Carlsbad has filed an objection.",
     "A surfer has claimed the waves were 'better yesterday' approximately four million times. All of them were correct.",
     "Downtown construction has broken ground fourteen times. The groundbreaking ceremony broke ground again last week.",
     "Mission San Luis Rey is the largest of the California missions. It is still older than the cold brew.",
@@ -241,7 +241,7 @@
     "The pier has been rebuilt exactly once, in 1987, which the city refers to as 'the maintenance plan.'",
     "The Sunset Market is not the farmers market. The city apologizes on behalf of everyone who keeps saying it is.",
     "The Strand has two speed limits: 5 mph and 'looking for parking.' Both are enforced by bicycles.",
-    "Every new downtown building is named after an ocean noun. The Pacific Oat was the last available combination.",
+    "Every new downtown building is named by pairing an ocean with a milk alternative. The Pacific Oat was the last available combination.",
     "Coast Highway is simultaneously a road, a construction project, and a group chat about what used to be there."
   ];
   var factQueue = null;
@@ -510,7 +510,7 @@
   $("popupClose").addEventListener("click", hidePopup);
   $("popupClaim").addEventListener("click", function () {
     hidePopup();
-    showToast("Your prize: one (1) free fog. Redeemable nowhere. Expires when it burns off.");
+    showToast("Your prize: one (1) unpermitted good time in O'side. Not valid in Carlsbad. HOA restrictions may apply.");
   });
 
   if (!storeGet("oside_popup")) {
